@@ -1816,3 +1816,24 @@ h1.hh,
     }
   }
 }
+
+/* ============================================================
+   MOBILE HARDENING
+   On phones the photo heroes use a vertical overlay so headline
+   and body text stay legible over any part of the image, and
+   footer links get a larger tap area.
+   ============================================================ */
+@media (max-width: 600px) {
+  .hero.has-photo::after,
+  .page-hero.has-photo::after {
+    background: linear-gradient(
+      180deg,
+      rgba(7, 10, 16, 0.9) 0%,
+      rgba(7, 10, 16, 0.74) 100%
+    );
+  }
+  .foot-col a {
+    padding: 5px 0;
+    margin-bottom: 6px;
+  }
+}
