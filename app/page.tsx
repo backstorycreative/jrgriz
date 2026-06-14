@@ -123,7 +123,16 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="hero">
+      <section className="hero has-photo">
+        <div className="hero-photo">
+          <Image
+            src="/full-pads-huddle.jpg"
+            alt="Junior Grizzlies team huddle in full pads"
+            fill
+            priority
+            sizes="100vw"
+          />
+        </div>
         <div className="hero-stripes" />
         <div className="wrap hero-in">
           <div>
