@@ -115,6 +115,11 @@ a {
   line-height: 1;
   white-space: nowrap;
 }
+.mark .markbear {
+  display: block;
+  height: 42px;
+  width: auto;
+}
 
 /* buttons */
 .btn {
