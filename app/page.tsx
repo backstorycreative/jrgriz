@@ -162,15 +162,15 @@ export default function Home() {
           </div>
           <div className="hero-art">
             <div className="glow" />
-            <div className="frame">
-              <Image
-                src="/jrgriz-bear-dark.png"
-                alt="JR Griz bear logo"
-                fill
-                priority
-                sizes="(max-width: 600px) 280px, 380px"
-              />
-            </div>
+            <Image
+              src="/jr-griz-home.png"
+              alt="JR Griz Football"
+              width={1269}
+              height={1063}
+              priority
+              className="hero-graphic"
+              sizes="(max-width: 980px) 80vw, 480px"
+            />
           </div>
         </div>
       </section>
