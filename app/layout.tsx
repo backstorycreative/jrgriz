@@ -35,8 +35,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${saira.variable} ${archivo.variable} ${anton.variable}`}>
+    <html
+      lang="en"
+      className={`${saira.variable} ${archivo.variable} ${anton.variable}`}
+    >
+      <body>
         <SiteNav />
         <main>{children}</main>
         <SiteFooter />
