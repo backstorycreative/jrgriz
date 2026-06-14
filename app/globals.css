@@ -894,7 +894,7 @@ footer {
 /* phone breakpoint */
 @media (max-width: 600px) {
   .wrap {
-    padding: 0 20px;
+    padding: 0 30px;
   }
   .sec {
     padding: 64px 0;
