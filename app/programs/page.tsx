@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Programs — JR Griz Football",
   description:
-    "Four year-round programs: Tackle Football, 7v7, Winter Camps, and Summer Camps — a connected development pathway for Lincoln youth athletes.",
+    "Four year-round programs: Tackle Football, 7v7, Winter Camps, and Summer Camps, a connected development pathway for Lincoln youth athletes.",
 };
 
 const programs = [
@@ -17,7 +17,7 @@ const programs = [
     ages: "Grades 3–8",
     level: "Competitive League",
     intro:
-      "Our flagship program. Fall tackle football puts a season of development into live, competitive play in the Metro Youth Football League — where fundamentals, teamwork, and preparation for the next level come together.",
+      "Our flagship program. Fall tackle football puts a season of development into live, competitive play in the Metro Youth Football League, where fundamentals, teamwork, and preparation for the next level come together.",
     points: [
       "Position-specific coaching on offense, defense, and special teams",
       "Certified, safety-first contact and tackling progressions",
@@ -33,7 +33,7 @@ const programs = [
     ages: "Grades 4–8",
     level: "Tournament Play",
     intro:
-      "Offseason passing-game development that sharpens the skill positions. 7v7 strips the game down to timing, route running, coverage, and communication — building the football IQ that shows up in the fall.",
+      "Offseason passing-game development that sharpens the skill positions. 7v7 strips the game down to timing, route running, coverage, and communication, building the football IQ that shows up in the fall.",
     points: [
       "Route trees, releases, and timing with the quarterback",
       "Man and zone coverage recognition for defensive backs",
@@ -49,7 +49,7 @@ const programs = [
     ages: "Grades 3–8",
     level: "Skill Development",
     intro:
-      "The base of the pathway. Indoor winter training focuses on the athletic foundation — fundamentals, speed, agility, and position work — with competitive reps that keep players sharp through the offseason.",
+      "The base of the pathway. Indoor winter training focuses on the athletic foundation: fundamentals, speed, agility, and position work, with competitive reps that keep players sharp through the offseason.",
     points: [
       "Speed, agility, and movement mechanics",
       "Footwork and fundamentals by position",
@@ -65,7 +65,7 @@ const programs = [
     ages: "Grades 3–8",
     level: "Preseason Prep",
     intro:
-      "The on-ramp to fall. Summer camps build skills, conditioning, confidence, and team concepts so athletes arrive in August ready to compete — and ready to lead.",
+      "The on-ramp to fall. Summer camps build skills, conditioning, confidence, and team concepts so athletes arrive in August ready to compete, and ready to lead.",
     points: [
       "Install of core team concepts and terminology",
       "Conditioning to build a fall-ready base",
@@ -98,7 +98,7 @@ export default function ProgramsPage() {
           </h1>
           <p className="lede">
             Junior Grizzlies athletes can train every part of the year. Each
-            program is built to stand on its own — and to feed the next, so
+            program is built to stand on its own, and to feed the next, so
             development never stops between seasons.
           </p>
         </div>
@@ -111,11 +111,10 @@ export default function ProgramsPage() {
               <div className="prow-media">
                 <Image
                   src={p.photo}
-                  alt={`${p.title} — Junior Grizzlies athletes`}
+                  alt={`${p.title}, Junior Grizzlies athletes`}
                   fill
                   sizes="(max-width: 980px) 100vw, 45vw"
                 />
-                <span className="knum">{p.n}</span>
               </div>
               <div>
                 <span className="eyebrow">{p.season}</span>
@@ -140,10 +139,7 @@ export default function ProgramsPage() {
         <div className="cta-band">
           <div className="wrap ct-in">
             <div>
-              <span className="eyebrow" style={{ color: "#06283a" }}>
-                Ready to play
-              </span>
-              <h2 style={{ marginTop: "12px" }}>
+              <h2>
                 Register for
                 <br />
                 the 2026 season.

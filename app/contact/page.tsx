@@ -62,7 +62,6 @@ export default function ContactPage() {
       <section className="sec">
         <div className="wrap contact-grid">
           <div>
-            <span className="eyebrow">Send a Message</span>
             <h2 style={{
               fontFamily: "var(--saira)", fontStyle: "italic", fontWeight: 900,
               textTransform: "uppercase", fontSize: "34px", lineHeight: ".95",
@@ -126,7 +125,6 @@ export default function ContactPage() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sh-l">
-              <span className="eyebrow">FAQ</span>
               <h2>Common questions.</h2>
             </div>
             <p className="sh-r">

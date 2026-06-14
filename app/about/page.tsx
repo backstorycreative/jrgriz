@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const values = [
   {
     title: "Development Over Everything",
-    copy: "Wins are a byproduct. Our north star is the long-term growth of every athlete — on the field, in the classroom, and in life.",
+    copy: "Wins are a byproduct. Our north star is the long-term growth of every athlete, on the field, in the classroom, and in life.",
   },
   {
     title: "Premier Experience",
@@ -23,7 +23,7 @@ const values = [
   },
   {
     title: "Accountability & Respect",
-    copy: "Players learn to be on time, work hard, and respect teammates, opponents, and officials — habits that carry far beyond football.",
+    copy: "Players learn to be on time, work hard, and respect teammates, opponents, and officials, habits that carry far beyond football.",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function AboutPage() {
           </h1>
           <p className="lede">
             Junior Grizzlies Football is a year-round youth football development
-            program in Lincoln, Nebraska — built to prepare players for high
+            program in Lincoln, Nebraska, built to prepare players for high
             school and beyond while delivering a premier football experience.
           </p>
         </div>
@@ -67,7 +67,6 @@ export default function AboutPage() {
       <section className="sec">
         <div className="wrap why-grid">
           <div>
-            <span className="eyebrow">Our Mission</span>
             <h2 style={{
               fontFamily: "var(--saira)", fontStyle: "italic", fontWeight: 900,
               textTransform: "uppercase", fontSize: "44px", lineHeight: ".95",
@@ -82,7 +81,7 @@ export default function AboutPage() {
               football IQ players need to succeed at the high school level.
             </p>
             <p className="lead">
-              Just as importantly, we believe football teaches lessons that last —
+              Just as importantly, we believe football teaches lessons that last:
               discipline, accountability, teamwork, and resilience. That&apos;s the
               standard we hold, win or lose.
             </p>
@@ -103,7 +102,6 @@ export default function AboutPage() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sh-l">
-              <span className="eyebrow">What We Stand For</span>
               <h2>Our values.</h2>
             </div>
             <p className="sh-r">
@@ -133,8 +131,8 @@ export default function AboutPage() {
             <h3>Competitive League Play</h3>
             <p>
               Our tackle teams compete in the Metro Youth Football League, giving
-              athletes real game reps against strong competition across the region
-              — the kind of experience that accelerates development.
+              athletes real game reps against strong competition across the
+              region, the kind of experience that accelerates development.
             </p>
           </div>
           <div className="tile">
@@ -146,8 +144,9 @@ export default function AboutPage() {
             <h3>Rooted in Lincoln</h3>
             <p>
               We&apos;re proud to be a Lincoln, Nebraska program. Families,
-              schools, and local businesses make the Griz possible — and we&apos;re
-              committed to giving back to the community that supports us.
+              schools, and local businesses make the Griz possible, and
+              we&apos;re committed to giving back to the community that supports
+              us.
             </p>
           </div>
         </div>
@@ -157,10 +156,7 @@ export default function AboutPage() {
         <div className="cta-band">
           <div className="wrap ct-in">
             <div>
-              <span className="eyebrow" style={{ color: "#06283a" }}>
-                Join the Griz
-              </span>
-              <h2 style={{ marginTop: "12px" }}>
+              <h2>
                 Become part
                 <br />
                 of the program.

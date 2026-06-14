@@ -98,22 +98,22 @@ const pillars = [
 
 const steps = [
   {
-    sn: "01 — WINTER",
+    sn: "01 · WINTER",
     title: "Winter Camps",
-    copy: "Build the base — fundamentals, speed, and agility.",
+    copy: "Build the base: fundamentals, speed, and agility.",
   },
   {
-    sn: "02 — SPRING",
+    sn: "02 · SPRING",
     title: "7v7 Football",
     copy: "Compete and sharpen the passing game.",
   },
   {
-    sn: "03 — SUMMER",
+    sn: "03 · SUMMER",
     title: "Summer Camps",
     copy: "Refine skills and prepare for the fall season.",
   },
   {
-    sn: "04 — FALL",
+    sn: "04 · FALL",
     title: "Tackle Football",
     copy: "Apply development in competitive league play.",
   },
@@ -180,7 +180,6 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sh-l">
-              <span className="eyebrow">Programs</span>
               <h2>
                 Four programs.
                 <br />
@@ -188,7 +187,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="sh-r">
-              Train every part of the year — tackle football, 7v7, and seasonal
+              Train every part of the year: tackle football, 7v7, and seasonal
               camps built to move athletes forward.
             </p>
           </div>
@@ -196,7 +195,6 @@ export default function Home() {
             {programs.map((p) => (
               <div className="card" key={p.n}>
                 <div className="ico">{p.icon}</div>
-                <div className="knum">{p.n}</div>
                 <h3>{p.title}</h3>
                 <p>{p.copy}</p>
                 <Link href="/programs" className="more">
@@ -212,7 +210,6 @@ export default function Home() {
       <section className="sec why">
         <div className="wrap why-grid">
           <div>
-            <span className="eyebrow">Why Junior Grizzlies</span>
             <h2>Built to prepare players for high school &amp; beyond.</h2>
             <p className="wcopy">
               Junior Grizzlies Football is dedicated to developing young
@@ -241,7 +238,6 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sh-l">
-              <span className="eyebrow">Program Pathway</span>
               <h2>
                 One system,
                 <br />
@@ -249,7 +245,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="sh-r">
-              Winter to fall — a development system designed so each program
+              Winter to fall: a development system designed so each program
               builds on the last.
             </p>
           </div>
@@ -277,11 +273,10 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sh-l">
-              <span className="eyebrow">On the Field</span>
               <h2>Griz in action.</h2>
             </div>
             <p className="sh-r">
-              Game days, camps, and competition — moments from the 2025 season at
+              Game days, camps, and competition. Moments from the 2025 season at
               Memorial Stadium and beyond.
             </p>
           </div>
@@ -290,7 +285,7 @@ export default function Home() {
               <div className="gtile" key={i}>
                 <Image
                   src={`/jrgriz-${i}.PNG`}
-                  alt={`Junior Grizzlies Football — game day moment ${i}`}
+                  alt={`Junior Grizzlies Football, game day moment ${i}`}
                   fill
                   sizes="(max-width: 760px) 50vw, 33vw"
                 />
@@ -305,10 +300,7 @@ export default function Home() {
         <div className="cta-band">
           <div className="wrap ct-in">
             <div>
-              <span className="eyebrow" style={{ color: "#06283a" }}>
-                Sponsorship
-              </span>
-              <h2 style={{ marginTop: "12px" }}>
+              <h2>
                 Help build
                 <br />
                 the program.

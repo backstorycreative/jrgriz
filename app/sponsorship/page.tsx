@@ -98,7 +98,6 @@ export default function SponsorshipPage() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sh-l">
-              <span className="eyebrow">Your Impact</span>
               <h2>Where support goes.</h2>
             </div>
             <p className="sh-r">
@@ -126,7 +125,6 @@ export default function SponsorshipPage() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sh-l">
-              <span className="eyebrow">Sponsorship Tiers</span>
               <h2>Choose your level.</h2>
             </div>
             <p className="sh-r">
@@ -204,10 +202,7 @@ export default function SponsorshipPage() {
         <div className="cta-band">
           <div className="wrap ct-in">
             <div>
-              <span className="eyebrow" style={{ color: "#06283a" }}>
-                Partner With Us
-              </span>
-              <h2 style={{ marginTop: "12px" }}>
+              <h2>
                 Let&apos;s talk
                 <br />
                 sponsorship.

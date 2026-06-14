@@ -7,7 +7,7 @@
   --line-2: rgba(255, 255, 255, 0.15);
   --ink: #f2f5fa;
   --muted: #8b95a6;
-  --muted-2: #5e6675;
+  --muted-2: #7e8694;
   --blue: #1fb0ef;
   --blue-2: #0c84c4;
   --blue-deep: #075d8c;
@@ -698,9 +698,10 @@ section {
 .pathway-copy {
   color: var(--muted);
   font-size: 16px;
-  max-width: 780px;
+  max-width: 680px;
   margin: 30px 0 0;
   line-height: 1.65;
+  text-wrap: pretty;
 }
 
 /* cta */
@@ -1031,7 +1032,8 @@ footer {
   font-size: 17px;
   color: var(--muted);
   line-height: 1.7;
-  max-width: 760px;
+  max-width: 680px;
+  text-wrap: pretty;
 }
 .lead + .lead {
   margin-top: 18px;
@@ -1721,4 +1723,96 @@ footer {
   gap: 14px;
   flex-wrap: wrap;
   margin-top: 30px;
+}
+
+/* accessible form placeholders */
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+/* ============================================================
+   TYPOGRAPHY POLISH
+   ============================================================ */
+h1,
+h2,
+h3,
+h4,
+.disp,
+h1.hh,
+.sec-head h2,
+.page-hero h1 {
+  text-wrap: balance;
+}
+.sub,
+.wcopy,
+.lede,
+.tile p,
+.card p,
+.tier .tdesc {
+  text-wrap: pretty;
+}
+
+/* ============================================================
+   MOTION — intentional, reduced-motion safe
+   Entrances only enhance an already-visible default: the hero
+   plays on load; section reveals use scroll timelines where
+   supported (opacity only, so card hover transforms are intact)
+   and simply no-op everywhere else.
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes imp-rise {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes imp-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* hero entrance on load (no hover transforms in here) */
+  .hero-in > div:first-child > * {
+    animation: imp-rise 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+  .hero-in > div:first-child > h1.hh {
+    animation-delay: 0.07s;
+  }
+  .hero-in > div:first-child > .sub {
+    animation-delay: 0.14s;
+  }
+  .hero-in > div:first-child > .hero-cta {
+    animation-delay: 0.21s;
+  }
+  .hero-art {
+    animation: imp-rise 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s both;
+  }
+
+  /* scroll-reveal where supported; gracefully absent otherwise */
+  @supports (animation-timeline: view()) {
+    .cards .card,
+    .grid-3 .tile,
+    .grid-2 .tile,
+    .tiers .tier,
+    .pathway .step,
+    .prow,
+    .gallery .gtile,
+    .stats .stat,
+    .pillars .pillar,
+    .faq details {
+      animation: imp-fade linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 55%;
+    }
+  }
 }

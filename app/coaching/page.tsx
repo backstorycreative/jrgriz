@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const principles = [
   {
     title: "Technique First",
-    copy: "Every rep is coached. We teach proper fundamentals — blocking, tackling, footwork, and ball skills — so habits built today hold up at the next level.",
+    copy: "Every rep is coached. We teach proper fundamentals: blocking, tackling, footwork, and ball skills, so habits built today hold up at the next level.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z" />
@@ -29,7 +29,7 @@ const principles = [
   },
   {
     title: "Develop the Whole Athlete",
-    copy: "Speed, strength, and football IQ matter — but so do confidence, accountability, and leadership. We coach the person as much as the player.",
+    copy: "Speed, strength, and football IQ matter, but so do confidence, accountability, and leadership. We coach the person as much as the player.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <circle cx="12" cy="8" r="4" />
@@ -48,7 +48,7 @@ const principles = [
   },
   {
     title: "Every Position, Every Player",
-    copy: "Position-specific coaching means linemen, skill players, and defenders all get focused, expert instruction — not just the ball-carriers.",
+    copy: "Position-specific coaching means linemen, skill players, and defenders all get focused, expert instruction, not just the ball-carriers.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <circle cx="12" cy="12" r="9" />
@@ -97,7 +97,7 @@ export default function CoachingPage() {
           </h1>
           <p className="lede">
             Junior Grizzlies coaches bring real experience and a development-first
-            approach. The goal isn&apos;t just to win on Saturday — it&apos;s to
+            approach. The goal isn&apos;t just to win on Saturday. It&apos;s to
             build athletes who are ready for high school football and the lessons
             that come with it.
           </p>
@@ -108,7 +108,6 @@ export default function CoachingPage() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sh-l">
-              <span className="eyebrow">Philosophy</span>
               <h2>How we coach.</h2>
             </div>
             <p className="sh-r">
@@ -132,7 +131,6 @@ export default function CoachingPage() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sh-l">
-              <span className="eyebrow">Coaching Staff</span>
               <h2>Meet the staff.</h2>
             </div>
             <p className="sh-r">
@@ -161,10 +159,7 @@ export default function CoachingPage() {
         <div className="cta-band">
           <div className="wrap ct-in">
             <div>
-              <span className="eyebrow" style={{ color: "#06283a" }}>
-                Get Involved
-              </span>
-              <h2 style={{ marginTop: "12px" }}>
+              <h2>
                 Coach with
                 <br />
                 the Griz.
