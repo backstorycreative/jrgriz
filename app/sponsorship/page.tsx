@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Sponsorship — JR Griz Football",
@@ -66,7 +67,16 @@ const tiers = [
 export default function SponsorshipPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero has-photo">
+        <div className="ph-photo">
+          <Image
+            src="/jrgriz-4.PNG"
+            alt="Junior Grizzlies players on the field"
+            fill
+            priority
+            sizes="100vw"
+          />
+        </div>
         <div className="ph-stripes" />
         <div className="wrap page-hero-in">
           <span className="eyebrow">Sponsorship</span>

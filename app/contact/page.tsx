@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
@@ -33,7 +34,16 @@ const faqs = [
 export default function ContactPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero has-photo">
+        <div className="ph-photo">
+          <Image
+            src="/jrgriz-3.PNG"
+            alt="Junior Grizzlies players taking the field"
+            fill
+            priority
+            sizes="100vw"
+          />
+        </div>
         <div className="ph-stripes" />
         <div className="wrap page-hero-in">
           <span className="eyebrow">Contact</span>
