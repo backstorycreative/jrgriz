@@ -1603,3 +1603,19 @@ footer {
 .step .arr {
   display: none;
 }
+
+/* ============================================================
+   LIGHT SECTION ("Four programs. One pathway." on home)
+   White background; previously-white text becomes black.
+   The 4 program cards keep their dark background + text (the
+   color is scoped to the section header only, not the cards).
+   ============================================================ */
+.sec-light {
+  background: #ffffff;
+}
+.sec-light .sec-head h2 {
+  color: #000000;
+}
+.sec-light .sec-head .sh-r {
+  color: #2a2f38;
+}

@@ -167,7 +167,7 @@ export default function Home() {
       </section>
 
       {/* Programs */}
-      <section className="sec" id="programs">
+      <section className="sec sec-light" id="programs">
         <div className="wrap">
           <div className="sec-head">
             <div className="sh-l">
