@@ -711,11 +711,12 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    115deg,
-    transparent 0 44px,
-    rgba(255, 255, 255, 0.07) 44px 46px
-  );
+  z-index: 1;
+  background-image: url("/football-pattern.png");
+  background-size: 460px;
+  background-repeat: repeat;
+  mix-blend-mode: soft-light;
+  opacity: 0.55;
 }
 .cta-band .ct-in {
   position: relative;
