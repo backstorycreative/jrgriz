@@ -30,9 +30,6 @@ export default function SiteNav() {
         </nav>
 
         <div className="nav-right">
-          <a href="#" className="signin">
-            Sign In
-          </a>
           <Link href="/contact" className="btn btn-primary">
             Register Now
           </Link>
