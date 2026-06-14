@@ -1638,7 +1638,7 @@ footer {
 .contact-info .ci,
 .nav-toggle,
 .cta-band,
-.prow-media,
+.prow .prow-media,
 .prow:nth-child(even) .prow-media {
   clip-path: none;
 }
