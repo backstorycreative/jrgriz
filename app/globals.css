@@ -1574,3 +1574,32 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ============================================================
+   SQUARED-OFF SHAPES
+   Override the angled / sheared geometry so every element renders
+   as a plain rectangle or square (no rhombus, parallelogram, or
+   trapezoid). Removes clip-paths, skews, and the triangle arrows.
+   ============================================================ */
+.btn,
+.mark .glyph,
+.hero-art .frame,
+.hero-art .badge,
+.pillar .pi,
+.tile .ti,
+.contact-info .ci,
+.nav-toggle,
+.cta-band,
+.prow-media,
+.prow:nth-child(even) .prow-media {
+  clip-path: none;
+}
+
+.eyebrow::before,
+.step .sbar {
+  transform: none;
+}
+
+.step .arr {
+  display: none;
+}
