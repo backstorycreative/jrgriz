@@ -1846,4 +1846,15 @@ h1.hh,
     padding: 5px 0;
     margin-bottom: 6px;
   }
+  /* larger tap areas for button-like controls on touch screens */
+  .card .more {
+    padding: 8px 0;
+    margin-top: 4px;
+  }
+  .faq summary {
+    padding: 10px 0;
+  }
+  .faq details {
+    padding: 14px 0;
+  }
 }
