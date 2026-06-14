@@ -1655,3 +1655,70 @@ footer {
 .sec-light .sec-head .sh-r {
   color: #2a2f38;
 }
+
+/* ============================================================
+   ACCESSIBILITY & INTERACTION STATES
+   ============================================================ */
+
+/* visible keyboard focus */
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+.cta-band :focus-visible {
+  outline-color: #04121c;
+}
+
+/* pressed feedback on buttons */
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* current-page indicator in the nav */
+.nav-links a {
+  position: relative;
+}
+.nav-links a.active {
+  color: var(--ink);
+}
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--blue);
+}
+.mobile-menu a.active {
+  color: var(--ink);
+}
+
+/* skip-to-content link (visible on keyboard focus) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--blue);
+  color: #04121c;
+  padding: 10px 18px;
+  font-family: var(--saira);
+  font-style: italic;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+}
+
+/* 404 actions */
+.nf-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}

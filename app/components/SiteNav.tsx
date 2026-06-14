@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Wordmark from "./Wordmark";
 
 const LINKS = [
@@ -15,6 +16,8 @@ const LINKS = [
 
 export default function SiteNav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isActive = (href: string) => pathname === href;
 
   return (
     <header className="nav">
@@ -23,7 +26,12 @@ export default function SiteNav() {
 
         <nav className="nav-links">
           {LINKS.map((l) => (
-            <Link key={l.label} href={l.href}>
+            <Link
+              key={l.label}
+              href={l.href}
+              className={isActive(l.href) ? "active" : undefined}
+              aria-current={isActive(l.href) ? "page" : undefined}
+            >
               {l.label}
             </Link>
           ))}
@@ -62,7 +70,13 @@ export default function SiteNav() {
       <div className={`mobile-menu${open ? " open" : ""}`}>
         <div className="wrap">
           {LINKS.map((l) => (
-            <Link key={l.label} href={l.href} onClick={() => setOpen(false)}>
+            <Link
+              key={l.label}
+              href={l.href}
+              className={isActive(l.href) ? "active" : undefined}
+              aria-current={isActive(l.href) ? "page" : undefined}
+              onClick={() => setOpen(false)}
+            >
               {l.label}
             </Link>
           ))}
