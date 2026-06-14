@@ -1,6 +1,5 @@
 import Image from "next/image";
-import SiteNav from "./components/SiteNav";
-import Wordmark from "./components/Wordmark";
+import Link from "next/link";
 
 const arrow = (
   <svg
@@ -123,8 +122,6 @@ const steps = [
 export default function Home() {
   return (
     <>
-      <SiteNav />
-
       {/* Hero */}
       <section className="hero">
         <div className="hero-stripes" />
@@ -146,12 +143,12 @@ export default function Home() {
               skill-specific training.
             </p>
             <div className="hero-cta">
-              <a href="#" className="btn btn-primary btn-lg">
+              <Link href="/contact" className="btn btn-primary btn-lg">
                 Register Now
-              </a>
-              <a href="#programs" className="btn btn-ghost btn-lg">
+              </Link>
+              <Link href="/programs" className="btn btn-ghost btn-lg">
                 View Programs
-              </a>
+              </Link>
             </div>
           </div>
           <div className="hero-art">
@@ -193,9 +190,9 @@ export default function Home() {
                 <div className="knum">{p.n}</div>
                 <h3>{p.title}</h3>
                 <p>{p.copy}</p>
-                <a href="#" className="more">
+                <Link href="/programs" className="more">
                   {p.cta} {arrow}
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -266,6 +263,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Moments gallery */}
+      <section className="sec why">
+        <div className="wrap">
+          <div className="sec-head">
+            <div className="sh-l">
+              <span className="eyebrow">On the Field</span>
+              <h2>Griz in action.</h2>
+            </div>
+            <p className="sh-r">
+              Game days, camps, and competition — moments from the 2025 season at
+              Memorial Stadium and beyond.
+            </p>
+          </div>
+          <div className="gallery">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div className="gtile" key={i}>
+                <Image
+                  src={`/jrgriz-${i}.PNG`}
+                  alt={`Junior Grizzlies Football — game day moment ${i}`}
+                  fill
+                  sizes="(max-width: 760px) 50vw, 33vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Sponsorship CTA */}
       <section className="cta-wrap" id="sponsor">
         <div className="cta-band">
@@ -285,52 +310,16 @@ export default function Home() {
               </p>
             </div>
             <div className="hero-cta">
-              <a href="#" className="btn btn-primary btn-lg">
+              <Link href="/sponsorship" className="btn btn-primary btn-lg">
                 Become a Sponsor
-              </a>
-              <a href="#" className="btn btn-ghost btn-lg">
+              </Link>
+              <Link href="/sponsorship" className="btn btn-ghost btn-lg">
                 Join the Booster Club
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer>
-        <div className="wrap">
-          <div className="foot-grid">
-            <div className="foot-brand">
-              <Wordmark />
-              <p>Year-round football development for Lincoln athletes.</p>
-            </div>
-            <div className="foot-col">
-              <h5>Programs</h5>
-              <a href="#">Tackle Football</a>
-              <a href="#">7v7 Football</a>
-              <a href="#">Winter Camps</a>
-              <a href="#">Summer Camps</a>
-            </div>
-            <div className="foot-col">
-              <h5>Organization</h5>
-              <a href="#">Coaching</a>
-              <a href="#">Sponsorship</a>
-              <a href="#">About</a>
-              <a href="#">Contact</a>
-            </div>
-            <div className="foot-col">
-              <h5>Support</h5>
-              <a href="#">Become a Sponsor</a>
-              <a href="#">Join the Booster Club</a>
-              <a href="#">Donate</a>
-            </div>
-          </div>
-          <div className="foot-bottom">
-            <span>© 2026 Junior Grizzlies Football · Lincoln, Nebraska</span>
-            <a href="mailto:football@jrgriz.com">football@jrgriz.com</a>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }

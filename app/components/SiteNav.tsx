@@ -1,15 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Wordmark from "./Wordmark";
 
 const LINKS = [
-  { label: "Home", href: "#" },
-  { label: "Programs", href: "#programs" },
-  { label: "Coaching", href: "#" },
-  { label: "Sponsorship", href: "#sponsor" },
-  { label: "About", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "Programs", href: "/programs" },
+  { label: "Coaching", href: "/coaching" },
+  { label: "Sponsorship", href: "/sponsorship" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function SiteNav() {
@@ -22,9 +23,9 @@ export default function SiteNav() {
 
         <nav className="nav-links">
           {LINKS.map((l) => (
-            <a key={l.label} href={l.href}>
+            <Link key={l.label} href={l.href}>
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -32,9 +33,9 @@ export default function SiteNav() {
           <a href="#" className="signin">
             Sign In
           </a>
-          <a href="#" className="btn btn-primary">
+          <Link href="/contact" className="btn btn-primary">
             Register Now
-          </a>
+          </Link>
         </div>
 
         <button
@@ -64,13 +65,17 @@ export default function SiteNav() {
       <div className={`mobile-menu${open ? " open" : ""}`}>
         <div className="wrap">
           {LINKS.map((l) => (
-            <a key={l.label} href={l.href} onClick={() => setOpen(false)}>
+            <Link key={l.label} href={l.href} onClick={() => setOpen(false)}>
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a href="#" className="btn btn-primary" onClick={() => setOpen(false)}>
+          <Link
+            href="/contact"
+            className="btn btn-primary"
+            onClick={() => setOpen(false)}
+          >
             Register Now
-          </a>
+          </Link>
         </div>
       </div>
     </header>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Saira_Condensed, Archivo, Anton } from "next/font/google";
 import "./globals.css";
+import SiteNav from "./components/SiteNav";
+import SiteFooter from "./components/SiteFooter";
 
 const saira = Saira_Condensed({
   subsets: ["latin"],
@@ -35,7 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${saira.variable} ${archivo.variable} ${anton.variable}`}>
-        {children}
+        <SiteNav />
+        <main>{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );

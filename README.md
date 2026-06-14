@@ -41,10 +41,11 @@ git add -A
 git commit -m "Initial JR Griz site"
 ```
 
-Create an empty repo on GitHub (github.com/new — don't add a README), then:
+The repo already exists at https://github.com/backstorycreative/jrgriz. Connect
+it and push:
 
 ```bash
-git remote add origin https://github.com/<your-username>/jrgriz.git
+git remote add origin https://github.com/backstorycreative/jrgriz.git
 git branch -M main
 git push -u origin main
 ```
